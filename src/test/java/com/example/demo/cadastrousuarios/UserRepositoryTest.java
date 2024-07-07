@@ -18,11 +18,11 @@ public class UserRepositoryTest {
     @Test
     public void testFindByEmail() {
         User user = new User();
-        user.setEmail("john@example.com");
+        user.setEmail("john1@example.com");
         userRepository.save(user);
 
-        User found = userRepository.findByEmail("john@example.com");
+        User found = userRepository.findByEmail("john1@example.com");
         assertThat(found).isNotNull();
-        assertThat(found.getEmail()).isEqualTo("john@example.com");
+        assertThat(found.getEmail()).isEqualTo("john1@example.com");
     }
 }
