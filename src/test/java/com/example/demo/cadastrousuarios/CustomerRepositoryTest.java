@@ -18,11 +18,11 @@ public class CustomerRepositoryTest {
     @Test
     public void testSaveAndFindCustomer() {
         Customer customer = new Customer();
-        customer.setName("John2");
+        customer.setName("User");
         customerRepository.save(customer);
 
         Customer found = customerRepository.findById(customer.getId()).orElse(null);
         assertThat(found).isNotNull();
-        assertThat(found.getName()).isEqualTo("John2");
+        assertThat(found.getName()).isEqualTo("User");
     }
 }
